@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>電話番号をハイフン区切りに変換</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="display-5 mt-3">電話番号をハイフン区切りに変換</h1>
+
+      <div class="row mt-5">
+        <div class="col">
+          <label for="input" class="form-label fw-bold">変換前</label>
+          <textarea
+            name="input"
+            id="telNumberSplitInput"
+            cols="30"
+            rows="10"
+            class="form-control"
+            placeholder="電話番号（複数行可）"
+            aria-label="電話番号(複数行可)"
+          ></textarea
+          ><br />
+          <div class="d-grid gap-2">
+            <button id="telNumberSplitButton" class="btn btn-primary">
+              変換 ＞
+            </button>
+          </div>
+        </div>
+        <div class="col">
+          <label for="output" class="form-label fw-bold">変換後</label>
+          <textarea
+            name="output"
+            id="telNumberSplitOutput"
+            cols="30"
+            rows="10"
+            class="form-control"
+            placeholder=""
+            aria-label=""
+          ></textarea>
+        </div>
+      </div>
+
+      <div class="text-bg-light p-3 mt-5">
+        <p>国内の電話番号をハイフン区切りに変換します。</p>
+        <h2 class="fs-6">例</h2>
+        <ul class="small">
+          <li>0801xxxxxxx -> 080-1xxx-xxxx</li>
+          <li>0901xxxxxxx -> 090-1xxx-xxxx</li>
+          <li>0701xxxxxxx -> 070-1xxx-xxxx</li>
+          <li>0501xxxxxxx -> 050-1xxx-xxxx</li>
+          <li>0120xxxxxx -> 0120-xxx-xxx</li>
+          <li>0800xxxxxxx -> 0800-xxx-xxxx</li>
+        </ul>
+        <h2 class="fs-6">利用データ</h2>
+        <p>
+          市外局番, 市内局番の区切り位置は<a
+            href="https://www.soumu.go.jp/main_sosiki/joho_tsusin/top/tel_number/number_shitei.html"
+            >総務省 市外局番データ</a
+          >に基づいています。<br />
+        </p>
+      </div>
+
+      <div class="mt-5">
+        <hr />
+        <p>
+          <a href="https://github.com/moriyk/jp-tel-splitter"
+            >moriyk/jp-tel-splitter</a
+          >
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
